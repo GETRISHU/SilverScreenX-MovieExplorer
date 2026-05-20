@@ -119,14 +119,6 @@ SilverscreenX/
 
 ---
 
-## ⚠️ API Keys & Secrets
-
-- The TMDb API key is currently stored in frontend JS for demo purposes.
-- The Clerk publishable key is safe for frontend use, but private keys should never be exposed in browser code.
-- For production, move sensitive credentials to a backend server and use environment variables.
-
----
-
 ## 🚀 Backend Contact Server
 
 To run the contact form backend:
@@ -149,13 +141,14 @@ PORT=3001
 
 ## 📸 Screenshots
 
-![Screenshot 1](Screenshot 2026-05-20 134925.png)
-![Screenshot 2](Screenshot 2026-05-20 134940.png)
-![Screenshot 3](Screenshot 2026-05-20 134952.png)
-![Screenshot 4](Screenshot 2026-05-20 135007.png)
-![Screenshot 5](Screenshot 2026-05-20 135022.png)
-![Screenshot 6](Screenshot 2026-05-20 135052.png)
-![Screenshot 7](Screenshot 2026-05-20 135114.png)
+![Screenshot 1](Screenshot%202026-05-20%20134925.png)
+![Screenshot 2](Screenshot%202026-05-20%20134940.png)
+![Screenshot 3](Screenshot%202026-05-20%20134952.png)
+![Screenshot 4](Screenshot%202026-05-20%20135007.png)
+![Screenshot 5](Screenshot%202026-05-20%20135022.png)
+![Screenshot 6](Screenshot%202026-05-20%20135052.png)
+![Screenshot 7](Screenshot%202026-05-20%20135114.png)
+
 
 ---
 
