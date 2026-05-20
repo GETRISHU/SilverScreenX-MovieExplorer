@@ -110,7 +110,13 @@ SilverscreenX/
 
 ## 📸 Screenshots
 
-_Add screenshots here to showcase your UI!_
+![My Image](./Screenshot%202026-05-20%20134925.png,)
+![My Image](./Screenshot%202026-05-20%20134940.png,)
+![My Image](./Screenshot%202026-05-20%20134952.png,)
+![My Image](./Screenshot%202026-05-20%20135007.png,)
+![My Image](./Screenshot%202026-05-20%20135022.png,)
+![My Image](./Screenshot%202026-05-20%20135052.png,)
+
 
 ---
 
