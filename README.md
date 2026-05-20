@@ -1,47 +1,60 @@
-# SilverScreenX
+﻿# SilverScreenX
 
-SilverScreenX is a modern, responsive movie streaming web application. It allows users to browse trending movies, search and filter by genre/year/language, view detailed information (including trailers, cast, and production), and enjoy a visually rich, interactive UI inspired by top streaming platforms.
+SilverScreenX is a modern, responsive movie discovery web application. The project delivers a streaming-style experience with a trending movie carousel, advanced search and filter controls, a movie detail overlay, a contact page, and a privacy policy page.
 
 ---
 
 ## ✨ Features
 
-- **Trending Movies Carousel:** Browse popular movies fetched from The Movie Database (TMDb) API.
-- **Advanced Search & Filters:** Search by title, filter by genre, year, language, minimum rating, and adult content.
-- **Movie Details:** View overview, ratings, genres, release date, director, cast, production, and trailers.
-- **Responsive Design:** Fully optimized for desktop, tablet, and mobile.
-- **Modern UI:** Built with Tailwind CSS, custom fonts, and smooth transitions.
-- **Skeleton Loading:** Animated placeholders while data loads.
-- **Pagination:** Easily navigate through multiple pages of results.
-- **Scroll to Top:** Floating button for quick navigation.
-- **Movie Detail Overlay:** Click a movie card for a popup with full details and trailer.
-- **Error Handling:** User-friendly error messages if data fails to load.
-- **Accessibility:** Semantic HTML, ARIA labels, and keyboard navigation.
-- **Custom Scrollbars:** Enhanced sidebar scroll experience.
-- **Contact & Privacy:** Dedicated pages for contacting the developer and privacy policy.
-- **Assets:** Custom images and video assets for branding and UI.
+- **Trending Movies Carousel:** Browse popular movies using TMDb API data.
+- **Advanced Search & Filters:** Filter movies by title, genre, year, language, rating, and adult content.
+- **Movie Detail Overlay:** Click a movie to see full details with genres, rating, runtime, and overview.
+- **Responsive UI:** Mobile-friendly layout with desktop/tablet support.
+- **Modern Brand Theme:** SilverScreenX red theme with custom styling and glassmorphism cards.
+- **Contact Form:** Contact page with email submission support via backend.
+- **Privacy Page:** Custom privacy policy with animated visuals.
+- **Smooth Animations:** Animated elements using Vanta.js, Animate.css, and scroll effects.
+- **Carousel UI:** Splide.js movie carousel for trending content.
+- **Clerk Authentication:** Login modal powered by Clerk for signup/signin flow.
+- **Error Handling:** Graceful fail states when API data cannot be loaded.
 
 ---
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
 ```
 SilverscreenX/
-│
+├── Frontend/
+│   ├── javascript/
+│   │   ├── index.js
+│   │   ├── movie.js
+│   │   ├── privacy.js
+│   │   └── connect.js
+│   ├── page/
+│   │   ├── index.html
+│   │   ├── movie.html
+│   │   ├── connect.html
+│   │   └── privacy.html
+│   └── style/
+│       ├── index.css
+│       ├── movie.css
+│       └── privacy.css
+├── contact/
+│   └── serverautoreply/
+│       ├── package.json
+│       ├── package-lock.json
+│       └── server.js
 ├── assests/
 │   ├── child.png
 │   ├── Download.png
 │   ├── IN-en-20250224-TRIFECTA-perspective_3a9c67b5-1d1d-49be-8499-d179f6389935_large.jpg
 │   ├── tlescope.png
-│   ├── tv.png
-│
-├── connect.html         # Contact page
-├── index.html           # Home page (trending, intro, FAQ, etc.)
-├── movie.html           # Main movie browser/search/filter page
-├── privacy.html         # Privacy policy
-├── README.md            # Project documentation
-├── script.js            # Main JavaScript logic (API, UI, etc.)
-├── index.css            # Custom styles (in addition to Tailwind)
+│   └── tv.png
+├── package.json
+├── package-lock.json
+├── README.md
+├── .gitignore
+└── screenshot files
 ```
 
 ---
@@ -51,89 +64,105 @@ SilverscreenX/
 ### Prerequisites
 
 - Modern web browser (Chrome, Firefox, Edge, etc.)
-- Internet connection (for fetching movie data from TMDb API)
+- Internet connection to fetch TMDb data and remote CDNs
 
-### Running Locally
+### Run the frontend locally
 
-1. **Clone the repository:**
+1. Clone the repository:
     ```sh
     git clone https://github.com/your-username/SilverScreenX.git
     cd SilverScreenX
     ```
 
-2. **Open `index.html` in your browser:**
-    - Double-click `index.html` or use a local server (e.g., [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VS Code).
+2. Open the app in browser:
+    - Open `Frontend/page/index.html` directly
+    - Or use a local server such as Live Server in VS Code
 
-3. **Browse Movies:**
-    - Use the navigation bar or go directly to `movie.html` for advanced search and filtering.
+3. Visit the pages:
+    - `Frontend/page/index.html` — Home page
+    - `Frontend/page/movie.html` — Movie explorer
+    - `Frontend/page/connect.html` — Contact page
+    - `Frontend/page/privacy.html` — Privacy policy
 
 ---
 
-## 🗂️ Main Pages
+## 🌐 Main Pages
 
-- **index.html** — Home page with trending movies, FAQ, and info sections.
-- **movie.html** — Advanced movie search, filtering, and details.
-- **connect.html** — Contact the developer.
-- **privacy.html** — Privacy policy.
+- **Home:** `Frontend/page/index.html`
+- **Movie Explorer:** `Frontend/page/movie.html`
+- **Contact:** `Frontend/page/connect.html`
+- **Privacy Policy:** `Frontend/page/privacy.html`
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **UI Framework:** Tailwind CSS (via CDN)
-- **Fonts:** Poppins, Jersey 15, Big Shoulders Stencil, Playwrite AU SA (Google Fonts)
-- **API:** [TMDb API](https://www.themoviedb.org/documentation/api)
-- **Icons:** SVG icons (inline, no external dependency)
-- **3D Background:** Vanta.js (for animated backgrounds)
-- **No frameworks:** Pure JS for all logic and DOM manipulation
+- HTML5, CSS3, JavaScript (ES6+)
+- Bootstrap 5 for layout and components
+- Tailwind CSS via CDN for utility styling
+- TMDb API for movie data
+- Splide.js carousel
+- Vanta.js animated backgrounds
+- Animate.css for motion effects
+- jQuery for FAQ toggles and page interactions
+- Node.js + Express backend for contact form email sending
 
 ---
 
-## ⚙️ Customization & Details
+## 🔧 Notes
 
-- **API Key:** The TMDb API key is hardcoded in `script.js`. For production, secure your API keys.
-- **Assets:** All images and videos are in the `assests/` folder.
-- **Styling:** Uses Tailwind CSS utility classes and a few custom styles in `index.css` and `<style>` blocks.
-- **Fonts:** Custom Google Fonts for branding and headings.
-- **Loading Skeletons:** `.skeleton` class for animated loading placeholders.
-- **Movie Cards:** Hover effects, transitions, and responsive grid layout.
-- **Movie Detail Overlay:** Accessible modal with ARIA roles and keyboard support.
-- **Scroll to Top:** Appears after scrolling, smooth scrolls to top.
-- **Error Handling:** Displays user-friendly messages if API fails.
-- **Pagination:** Dynamic, with "Prev" and "Next" buttons, and page numbers.
-- **Accessibility:** Uses semantic HTML, ARIA labels, and keyboard navigation for overlays.
-- **Custom Scrollbars:** Enhanced for sidebar elements.
-- **Contact & Privacy:** Simple, accessible static pages.
+- The frontend uses `Frontend/javascript/index.js` and `Frontend/javascript/movie.js` for movie API logic and page behavior.
+- Theme styling is spread across `Frontend/style/index.css`, `Frontend/style/movie.css`, and `Frontend/style/privacy.css`.
+- The homepage and movie page use the brand red accent `#BB2D3B`.
+- `Frontend/javascript/index.js` also handles Clerk login and page initialization.
+- `contact/serverautoreply/server.js` supports email sending via Nodemailer when configured with environment variables.
+
+---
+
+## ⚠️ API Keys & Secrets
+
+- The TMDb API key is currently stored in frontend JS for demo purposes.
+- The Clerk publishable key is safe for frontend use, but private keys should never be exposed in browser code.
+- For production, move sensitive credentials to a backend server and use environment variables.
+
+---
+
+## 🚀 Backend Contact Server
+
+To run the contact form backend:
+
+```sh
+cd contact/serverautoreply
+npm install
+npm start
+```
+
+Then set environment variables for email delivery:
+
+```env
+EMAIL_USER=youremail@example.com
+EMAIL_PASS=your-email-password
+PORT=3001
+```
 
 ---
 
 ## 📸 Screenshots
 
-## 📸 Screenshots
-
-![My Image](./Screenshot%202026-05-20%20134925.png)
-![My Image](./Screenshot%202026-05-20%20134940.png)
-![My Image](./Screenshot%202026-05-20%20134952.png)
-![My Image](./Screenshot%202026-05-20%20135007.png)
-![My Image](./Screenshot%202026-05-20%20135022.png)
-![My Image](./Screenshot%202026-05-20%20135052.png)
-![My Image](./Screenshot%202026-05-20%20135114.png)
-
-
-
----
-
-## 📄 License
-
-This project is for educational/demo purposes. For commercial use, ensure compliance with TMDb API and third-party asset licenses.
+![Screenshot 1](Screenshot 2026-05-20 134925.png)
+![Screenshot 2](Screenshot 2026-05-20 134940.png)
+![Screenshot 3](Screenshot 2026-05-20 134952.png)
+![Screenshot 4](Screenshot 2026-05-20 135007.png)
+![Screenshot 5](Screenshot 2026-05-20 135022.png)
+![Screenshot 6](Screenshot 2026-05-20 135052.png)
+![Screenshot 7](Screenshot 2026-05-20 135114.png)
 
 ---
 
 ## 📬 Contact
 
-For questions or feedback, visit [connect.html](connect.html) or itzrishi102@gmail.com
+For questions or feedback, open `Frontend/page/connect.html` or email itzrishi102@gmail.com.
 
 ---
 
-**Enjoy exploring movies with
+**Enjoy exploring movies with SilverScreenX!**
