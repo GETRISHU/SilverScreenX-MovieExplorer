@@ -14,12 +14,39 @@
       transform: translateY(-10px) scale(1.02);
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     }
+    img[data-src] {
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    img.loaded {
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0.9;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    #youtubeThumb {
+      position: relative;
+    }
+    #youtubeThumb:hover svg {
+      transform: scale(1.1);
+    }
+    #youtubeThumb svg {
+      transition: transform 0.3s ease;
+    }
     .movie-detail-overlay {
-      backdrop-filter: blur(10px);
-      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(4px);
+      background: rgba(0, 0, 0, 0.92);
+      will-change: opacity;
     }
     .movie-detail-content {
       animation: fadeInUp 0.5s;
+      will-change: transform;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
     @keyframes fadeInUp {
       from {
